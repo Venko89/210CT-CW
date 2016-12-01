@@ -1,0 +1,46 @@
+FUNCTION ADD_MATRICES(Matrix1 , Matrix2):
+          New_rows <- EMPTY LIST
+          For i <- 0 to Matrix1
+                  append new_rows (Matrix1[I] add Matrix2[i])
+         return New_rows
+         New_columns <- EMPTY LIST
+         For j <- 0 to Matrix1
+                  append new_columns(Matrix1[I] add Matrix2[i])
+         return New_columns
+
+FUNCTION SUBSTRACT_MATRICES(Matrix1, Matrix2):
+          New_matrix <- EMPTY LIST
+          For I <- 0 to Matrix1
+                    append New_matrix(Matrix1[i] subtract Matrix2[i])
+         return New_Matrix
+
+FUNCTION MULTIPLY_MATRICES(Matrix1, Matrix2):
+         new_matrix <- Empty list with same Size (Matrix1, matrix2)
+         Size <- squareroot(Matrix1.lenght)
+                              For i <- 0 to Size
+                                   for j <- 0 to Size
+                                              New_value <- 0
+                                              for k <- 0 to size
+                                                                 Matrix1_value <- Matrix1 [i*size+k]
+                                                                 Matrix2_value <- Matrix2 [k*size+j]
+                                                                 add Matrix1_value * Matrix2_value to new_value
+                                              new_matrix [ I * size + j] <- new_value
+         return new_matrix
+
+         
+FUNCTION MULTIPLY_MATRIX(matrix, factor)
+           New_Matrix <- Empty List
+           For i <- 0 to Matrix1.lenght
+                        Append Matrix[i]*factor to New_Matrix
+           Return New_Matrix
+
+
+
+
+
+Matrix1 <- b
+Matrix2 <- c
+b_times_c  <-  FUNCTION MULTIPLY_MATRICES(Matrix1, Matrix2)
+b_plus_c <- FUNCTION ADD_MATRICES(Matrix1 , Matrix2)
+two_times_b_plus_c  <-  FUNCTION MULTIPLY_MATRIX ( b_plus_c , 2)
+a  <-  FUNCTION SUBSTRACT_MATRICES (b_times_c , two_times_b_plus_c)
