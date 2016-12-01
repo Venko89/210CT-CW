@@ -1,0 +1,40 @@
+LinkedList<LinkedList<node>> adjacencyList
+
+addNode(node) 
+	if node already in adjacencyList 
+		Give error
+
+	adjacencyList addAtIndex(node, new LinkedList)
+
+
+addEdge(node1, node2) 
+	if node1 or node2 not in adjacencyList 
+		Give error
+	
+	djacencyList[node1] <- node2
+	djacencyList[node2] <- node1
+
+
+bfs (startNode) 
+  queue <- startNode
+  visited[startNode] = true
+  while queue not empty 
+    currentNode <- queue
+    print (or do smth else with) currentNode
+    for each neighbour of currentNode 
+		if not visited[neighbour] 
+			queue <- neighbour
+			visited[neighbour] = true
+		
+
+dfs (startNode) 
+  stack <- startNode
+  visited[startNode] = true
+  while stack not empty 
+    currentNode <- stack
+    print (or do smth else with) currentNode
+    for each neighbour of currentNode 
+		if not visited[neighbour] 
+			stack <- neighbour
+			visited[neighbour] = true
+		
